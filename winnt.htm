@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>DOSprn 1.85 dla użutkowników Windows NT/2000/XP</TITLE>
+<META http-equiv=Content-Language content=pl>
+<META http-equiv=Content-Type content="text/html; charset=windows-1250">
+<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+
+<BODY background=images/bg2.jpg>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=750 border=0>
+  
+  <TR>
+    <TD width="100%"><table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="50"><IMG src="images/logo.gif" ALT="Drukowanie z DOS'a na drukarkach pod Windows98, WinXP, Windows2000" width="42" height="39"></td>
+          <td width="281"><font size="6"><b>DOSprn 1.85</b></font></td>
+          <td width="194">      
+      <table border="2" bgcolor="#C0C0C0" cellpadding="4" cellspacing="4">
+        <tr>
+          <td><a href="http://www.dosprn.com"><img src="images/uno_fl_s.gif" align="center" width="30" height="20" alt="Dos print international support center DOSPRN" border=0></a></td>
+          <td><a href="http://ukrainian.dosprn.com" id="ukrainian"><img src="images/ukraine_fl_s.gif" width="30" height="20" alt="DOSPRN Ukrainian dos print support center" align="center" border="0"></a></td>
+          <td><a href="http://polska.dosprn.com"><img src="images/poland_fl_s.gif" width="30" height="20" alt="Dosprinter Polish support center" align="center" border="0"></a></td>
+                    <td><a href="http://dosprn.co.il"><img src="images/israel_fl_s.gif" width="30" height="20" alt="DOSPRN Israel dos usb support center" align="center" border="0"></a></td>
+          <td><a href="http://bkltd.com/dosprn/"><img src="images/bulgaria_fl_s.gif" width="30" height="20" alt="DOSPRN Bulgaria dos print support center" align="center" border="0"></a></td>
+
+          <td><a href="http://indonesian.dosprn.com"><img src="images/indonesia_fl_s.gif" width="30" height="20" alt="Indonesian DOSPRN support center" align="center" border="0"></a></td>
+          <td><a href="http://dosprn.cz/index.php?doorkey=kontakt"><img src="images/chech_fl_s.gif" width="30" height="20" alt="DOS USB Czech support center" align="center" border="0"></a></td>
+       	</tr><br>
+      </table></td>
+        </tr></table>
+           </TD></TR>
+  <TR>
+  <HR>
+      <FONT size=3>
+	  <A href="index.htm">O nas </A>|
+	  <A href="readme.htm"> Podręcznik </A>|
+	  <A href="news.htm"> Co nowego </A>|
+	  <A href="http://track.websiteceo.com/r/5192/www.dosprn.com/DOSprn185.exe"> Pobierz </A>|
+	  <A href="order.htm"> Zamów </A>|
+	  <A href="faq.htm"> FAQ </A>|
+	  <A href="mailto:support@dosprn.com?Subject=DOSPRN%20support"> Pomoc </A>|
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>
+	  </FONT> 
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD width="100%">
+      <H3>Dla użytkowników Windows NT/2000/XP</H3>
+      <P>Ten dodatkowy program przekierowuje wszystkie wydruki z bieżącącego okna 
+	  aplikacji DOS do pliku tekstowego.</P>
+	  <P>W czasie instalacji DOSprn automatycznie umieszcza wywołanie <I> prn2file.com </I> 
+	  w pliku <I>%&nbsp;SystemRoot%\System32\autoexec.nt</I>.
+	  Ten plik wsadowy, zawierający polecenia systemowe jest wykonywany każdorozowo, 
+	  gdy uruchamia się aplikację DOS'a.</P>
+	  <P>Możesz też umieścić to wywołanie <I> prn2file.com </I> bezpośrednio przed 
+	  uruchomieniem twojego programu DOS'a. Możesz utworzyć plik wsadowy "batch" wywołujący 
+	  <I> prn2file.com </I> i twój program DOS'a. Oczywiście w tym przypadku powinieneś 
+	  usunąć wywołanie z <I> %&nbsp;SystemRoot%&nbsp;\System32\autoexec.nt</I>.
+	  </P>
+      <P>Parametery wywołania:</P>
+	  <PRE>PRN2FILE [plik] [#&lt;n&gt;] [/S&lt;nnnnn&gt;]
+
+Domyślnie ustawienie: PRN2FILE C:\PRNSPL #1 /S10000 
+
+plik    - nazwa pliku wraz z scieżka, do którego będzie przechwytywany wydruk 
+#n      - numer portu LPT (n=1 => LPT1) 
+/Snnnnn - rozmiar bufora ( nnnnn - max. rozmiar wydruku w znakach - bajtach)
+	  </PRE>
+      <P>Jeśli twój program DOS'a wygenerowuje obszerniejszy dokument niż zdefiniowana licza 
+	  <I> nnnnn </I>, możesz powiększyć ten parametr do wymaganego rozmiaru.</P>
+      <H4>Uwaga:</H4>
+      <P>Jeśli twój program DOS'a może skierować wydruk do pliku zamiast do portu LPTx, to 
+	  polecamy takie rozwiązanie. W tym przypadku nie potrzeba używać <I> prn2file.com </I>. 
+	  Wprowadź w programie DOS'a nazwę pliku np. C:\PRNSPL   jako miejsce wydruku do pliku 
+	  tekstowego.</P>
+	  <P>Jednocześnie powinieneś w parametrach DOSprn "nazwa pliku" wprowadzić identyczną 
+	  nazwę jak nazwa w programie DOS'a.</P>
+	  <P></P>
+      </TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <HR>
+      <FONT size=3>
+	  <A href="index.htm">O nas </A>|
+	  <A href="readme.htm"> Podręcznik </A>|
+	  <A href="news.htm"> Co nowego </A>|
+	  <A href="http://track.websiteceo.com/r/5192/www.dosprn.com/DOSprn185.exe"> Pobierz </A>|
+	  <A href="order.htm"> Zamów </A>|
+	  <A href="faq.htm"> FAQ </A>|
+	  <A href="mailto:support@dosprn.com?Subject=DOSPRN%20support"> Pomoc </A>|
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>
+	  </FONT> 
+
+      <HR>
+    </TD></TR></TABLE></CENTER></DIV>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39647417-1', 'dosprn.com');
+  ga('send', 'pageview');
+
+</script>
+</body></HTML>

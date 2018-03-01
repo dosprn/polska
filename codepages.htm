@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>DOSprn 1.85 pomoc w określeniu sekwencji  ESC</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1250">
+<META name=Keywords  content="DOS, drukarki, program, drukownie, drukarka, USB, programy, LPT, program DOS, oprogramowanie, narodowości, język, międzynarodowy" >
+<META name=Description  content="DOSprn pozwoli ci użyć starego ulubionego programu DOS z nowymi drukarkami niezależnie od ich typów ( USB też !)" >
+<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<BODY background=images/bg2.jpg>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=750 border=0>
+  
+  <TR>
+    <TD width="100%">      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="50"><IMG src="images/logo.gif" ALT="Drukowanie z DOS'a na drukarkach pod Windows98, WinXP, Windows2000" width="42" height="39"></td>
+          <td width="281"><font size="6"><b>DOSprn 1.85</b></font></td>
+          <td width="194">      
+      <table border="2" bgcolor="#C0C0C0" cellpadding="4" cellspacing="4">
+        <tr>
+          <td><a href="http://www.dosprn.com"><img src="images/uno_fl_s.gif" align="center" width="30" height="20" alt="Dos print international support center DOSPRN" border=0></a></td>
+          <td><a href="http://ukrainian.dosprn.com" id="ukrainian"><img src="images/ukraine_fl_s.gif" width="30" height="20" alt="DOSPRN Ukrainian dos print support center" align="center" border="0"></a></td>
+          <td><a href="http://polska.dosprn.com"><img src="images/poland_fl_s.gif" width="30" height="20" alt="Dosprinter Polish support center" align="center" border="0"></a></td>
+                    <td><a href="http://dosprn.co.il"><img src="images/israel_fl_s.gif" width="30" height="20" alt="DOSPRN Israel dos usb support center" align="center" border="0"></a></td>
+          <td><a href="http://bkltd.com/dosprn/"><img src="images/bulgaria_fl_s.gif" width="30" height="20" alt="DOSPRN Bulgaria dos print support center" align="center" border="0"></a></td>
+
+          <td><a href="http://indonesian.dosprn.com"><img src="images/indonesia_fl_s.gif" width="30" height="20" alt="Indonesian DOSPRN support center" align="center" border="0"></a></td>
+          <td><a href="http://dosprn.cz/index.php?doorkey=kontakt"><img src="images/chech_fl_s.gif" width="30" height="20" alt="DOS USB Czech support center" align="center" border="0"></a></td>
+        </tr>
+      </table>
+			</td>
+        </tr></table>
+</TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <HR>
+
+      <FONT size=3>
+	  <A href="index.htm">O nas </A>| 
+	  <A href="readme.htm"> Podręcznik </A>| 
+	  <A href="news.htm"> Co nowego </A>| 
+	  <A href="http://track.websiteceo.com/r/5192/www.dosprn.com/DOSprn185.exe"> Pobierz </A>| 
+	  <A href="order.htm"> Zamów </A> | 
+	  <A href="faq.htm"> FAQ </A> | 
+	  <A href="mailto:support@dosprn.com?Subject=dosprn%20support"> Pomoc </A> | 
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>
+	  </FONT>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD width="100%">
+      <H3>Codepage (strony kodowe) opis modułu</H3>
+      <p>DOSprn ma wbudowaną obsługę kilku stron kodowych.<BR><BR>850 (Europa wschodnia)
+	  <BR>852 (Latin II)<BR>737 (Grecja)<BR>437 (USA)<BR>855 (Bułgaria)<BR>866 (Cyrilica)
+      <BR><BR>To są strone kodowe aktualnie dołączone.
+	  </p>
+      <p>Ponadto, każdy użytkownik może utworzyć swój moduł obsługi strony kodowej.
+	  Każdy moduł językowy zapisany jest w pliku tekstowym o rozszerzeniu. <b>Strona kodowa emulacji </b>, 
+	  który składa się z ciągów znaków opisanych poniżej
+	  </p>
+      <pre><b><i>ascii_kod=unicode</i></b></pre>
+      <p>gdzie ascii_kod jest normalnym znakiem DOS.
+	  Ponieważ pierwsza połowa tabeli kodów  ASCII (od 0 do 127) zawiera drukowalne litery i znaki 
+	  łacińskie, zalecamy kodować tylko drugą połowę tabeli kodów ASCII ( od 128 do 255).
+	  </P>
+	  <p>Ta część tabeli zwykle zawiera znaki narodowe diakrytyczne. Ich rysunek i postać 
+	  określa używana w DOS strona kodowa. Należy znaleźć odpowiednią literę w tabeli Unicode 
+	  i&nbsp;wpisać jej kod po znaku równości. Można zapisać ten kod w formacie dziesiętnym 
+	  lub w&nbsp;szesnastkowym. W drugi przypadku kod musi być poprzedzony znakiem &quot;$&quot;.
+	  </p>
+	  <p> na przykład  znak &quot;ć&quot; można opisać jako  ć =$00C6 albo ć=198. </p>
+	  <p>W przypadku kiedy znaki ASCII i Unicode następują kolejno po sobie jeden za drugim,
+	  można użyć bardziej zwięzłej formy</p>
+	  <pre><b><i>ascii_kod1..ascii_kod2 = unicode1..unicode2</i></b></pre>
+	  <p>gdzie &quot;ascii_kod1..ascii_kod2&quot; są z zakresu znaków DOS i &quot;unicode1..unicode2&quot;
+	  są z zakresu odpowiadających im kodom Unicodes.
+	  </p>
+	  <p>Można skopiować dowolny plik modułu języka z nową nazwą ( ale z tym samym 
+	  rozszerzeniem nazwy pliku) i otworzyć go edytorem tekstów DOS. Wówczas można 
+	  zmodyfikować łańcuchy kodów Unicode i zapisać te zmiany.
+	  </p>
+	  <p>Na koniec, aby plik strony kodowej został uwidoczniony w programie DOSprn, 
+	  należy ponownie uruchomić program a moduł strony kodowej zostanie załadowany.</p><BR>
+      </TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <HR>
+      <FONT size=3>
+	  <A href="index.htm">O nas </A>| 
+	  <A href="readme.htm"> Podręcznik </A>| 
+	  <A href="news.htm"> Co nowego </A>| 
+	  <A href="http://track.websiteceo.com/r/5192/www.dosprn.com/DOSprn185.exe"> Pobierz </A>| 
+	  <A href="order.htm"> Zamów </A> | 
+	  <A href="faq.htm"> FAQ </A> | 
+	  <A href="mailto:support@dosprn.com?Subject=dosprn%20support"> Pomoc </A> | 
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>
+	  </FONT>
+      <HR>
+    </TD></TR></TABLE></CENTER></DIV>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39647417-1', 'dosprn.com');
+  ga('send', 'pageview');
+
+</script>
+</body></HTML>

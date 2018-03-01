@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>DOSPRN 1.85 zarządanie sekwencjami ESC</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1250">
+<META name=Keywords  content="DOS, drukarki, program, drukownie, drukarka, USB, programy, LPT, program DOS, oprogramowanie, narodowości, język, międzynarodowy" >
+<META name=Description  content="DOSprn pozwoli ci użyć starego ulubionego programu DOS z nowymi drukarkami niezależnie od ich typów ( USB też !)" >
+<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<BODY background=images/bg2.jpg>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=750 border=0>
+  
+  <TR>
+    <TD width="100%">      <table border="0" cellspacing="0" cellpadding="0" width="630">
+        <tr>
+          <td width="50"><IMG src="images/logo.gif" ALT="Drukowanie z DOS'a na drukarkach pod Windows98, WinXP, Windows2000" width="42" height="39"></td>
+          <td width="281"><font size="6"><b>DOSprn 1.85</b></font></td>
+          <td width="194">      
+      <table border="2" bgcolor="#C0C0C0" cellpadding="4" cellspacing="4">
+        <tr>
+          <td><a href="http://www.dosprn.com"><img src="images/uno_fl_s.gif" align="center" width="30" height="20" alt="Dos print international support center DOSPRN" border=0></a></td>
+          <td><a href="http://ukrainian.dosprn.com" id="ukrainian"><img src="images/ukraine_fl_s.gif" width="30" height="20" alt="DOSPRN Ukrainian dos print support center" align="center" border="0"></a></td>
+          <td><a href="http://polska.dosprn.com"><img src="images/poland_fl_s.gif" width="30" height="20" alt="Dosprinter Polish support center" align="center" border="0"></a></td>
+                    <td><a href="http://dosprn.co.il"><img src="images/israel_fl_s.gif" width="30" height="20" alt="DOSPRN Israel dos usb support center" align="center" border="0"></a></td>
+          <td><a href="http://bkltd.com/dosprn/"><img src="images/bulgaria_fl_s.gif" width="30" height="20" alt="DOSPRN Bulgaria dos print support center" align="center" border="0"></a></td>
+
+          <td><a href="http://indonesian.dosprn.com"><img src="images/indonesia_fl_s.gif" width="30" height="20" alt="Indonesian DOSPRN support center" align="center" border="0"></a></td>
+          <td><a href="http://dosprn.cz/index.php?doorkey=kontakt"><img src="images/chech_fl_s.gif" width="30" height="20" alt="DOS USB Czech support center" align="center" border="0"></a></td>
+        </tr>
+      </table>
+			</td>
+        </tr></table>
+</TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <HR>
+      <FONT size=3>
+	  <A href="index.htm">O nas </A>| 
+	  <A href="readme.htm"> Podręcznik </A>| 
+	  <A href="news.htm"> Co nowego </A>| 
+	  <A href="http://track.websiteceo.com/r/5192/www.dosprn.com/DOSprn185.exe"> Pobierz </A>| 
+	  <A href="order.htm"> Zamów </A> | 
+	  <A href="faq.htm"> FAQ </A> | 
+	  <A href="mailto:support@dosprn.com?Subject=dosprn%20support"> Pomoc </A> | 
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>
+	  </FONT>
+
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD width="100%">
+      <h3>Opis sekwencji</h3>
+      <p>Sekwencje, to specjalny zestaw kodów ASCII używanych do zarządzania wyświetlaniem 
+	  informacji na różnych urządzeniach wizualizacyjnych (monitor, drukarka, ploter ...).<br>
+	  Na przykład: wszystkie drukarki zgodne ze standardem Epson obsługują znormalizowane 
+	  sekwencje ESC-P/ESC-P2 (zobacz sekwencje Esc).<br><br>
+	  Sekwencje te pozwalają zmieniać rozmiar, kolor i gęstość drukowanych znaków, określać
+	  poziome i pionowe zagęszczenie druku, wydrukować proste formy graficzne, itp.<br><br>
+	  DOSPRN emuluje teraz kilkanaście sekwencji. Posiada  
+	  <a href="#1">zestaw sekwencji domyślnych </a>, ale też posiada zestaw emulujący 
+	  najważniejsze i często używane sekwencje ESC-P2 <a href="#2"> standardu EPSON Matrix</a>.&nbsp;</p>	  
+	  <p>Jako rozszerzenie dostępny jest zestaw do emulacji drukarek HP PCL. Taki zestaw 
+	  może być przydatny w przypadek, gdy Twój program DOS'a jest zaprojektowany do 
+	  drukowania tylko na drukarkach Hewlett Packard PCL, ale nie masz takiej drukarki. 
+	  Jeśli masz naprawdę taki program, który wymaga emulacji HP PCL to wyślij email o <a href="mailto:support@dosprn.com">pomoc</a>.<br></p>
+    </TD></TR>
+  <TR>
+    <TD width="100%">
+	<br><br>
+      <h3>Budowa sekwencji</h3>
+      <p>W każdym trybie drukowania DOSPRN może wykorzystać jedną lub kilka alternatywnych
+	  sekwencji we wszystkich dostępnych zestawach. Sekwencje są niezależne od wersji językowych
+	  programu DOSprn.
+      <ul type="circle">
+        <li>każdy nie drukowalny kod ASCII jest przedstawiony jako 
+		<b><font face="Courier New">[#XX]</font>
+          </b>gdzie <font face="Courier New"><b>XX</b></font> jest wartością kodu</li>
+        <li>każda alternatywna sekwencja jest oddzielona podwójną pionową kreską 
+		( zob. <b><font face="Courier New">||</font></b>)</li>
+        <li>każda sekwencja zawierająca parameter (wielkość czcionki, LPI, CPI, kolor itp.)
+		jest zapisana z zerami lub znakiem podkreślenia w pozycji parametru.<br>
+          -- Jeśli użyje się zer w sekwencji, wówczas znaki w tym miejscu przesłane przez program DOS'a
+		  będą zinterpretowane jako ciąg znaków  ASCII.<br>
+		  Na przykład, gdy sekwencja jest zdefiniowana jako <b><font face="Courier New">[#27]X0000</font></b>
+		  i program DOS'a prześle łańcuch znaków <b><font face="Courier New">[#27]X1234</font></b>,
+		  wówczas DOSprn zdecydyje że parametr jest w&nbsp;postaci ciągu znaków &quot;1234&quot;.<br>
+          -- Jeśli użyje się znaku podkreślenia w sekwencji, wówczas znak w tym miejscu 
+		  przesłany przez program DOS'a będzie zinterpretowany jako kod tego znaku.
+          <br>Na przykład, gdy sekwencja jest zdefiniowana jako 
+		  <b><font face="Courier New">[#27]r_</font></b> &nbsp;&nbsp;i program DOS'a 
+		  prześle łańcuch  <b><font face="Courier New">[#27]r0</font></b> &nbsp;&nbsp;, 
+		  wówczas DOSprn zinterpretuje parametr jako &quot;48&quot;&nbsp;(liczba&nbsp;48 jest kodem ASCII znaku '0')</li>
+      </ul>
+      <p>&nbsp;</TD></TR>
+  <TR>
+    <TD width="100%">
+      <H3><a name="1"></a>Domyśle sekwencje DOSprn</H3>
+      <p align="center">
+      <img border="0" src="images/seq-default.png" width="531" height="588" alt="Sekwencje domyślne">
+      <div align="center">
+        <center>
+      <TABLE cellSpacing=1 cellpadding=5 width="100%" border=1>
+        
+        <TR>
+          <TD align="left">(Esc) OP</TD>
+          <TD align="left">
+            <p align="left">pionowa orientacja strony ( portret )</p>
+          </TD></TR>
+        <TR>
+          <TD align="left">(Esc) OL</TD>
+          <TD align="left">pozioma orientacja strony ( widok )</TD></TR>
+        <TR>
+          <TD align="left">(Esc) Pxx</TD>
+          <TD align="left">szerokość czcionki w znakach/cal -domyślnie xx=12</TD></TR>
+        <TR>
+          <TD align="left">(Esc) Lxx</TD>
+          <TD align="left">gęstość wydruku w liniach /cal -domyślnie  xx=06</TD></TR>
+        <TR>
+          <TD align="left">(Esc) C$xxxxxx</TD>
+          <TD align="left">wybierz kolor xxxxxx to kolor w hex</TD></TR>
+        <tr>
+          <TD align="left">(Esc) Fxx</TD>
+          <TD align="left">wielkość czcionki  xx. -domyślnie xx=10</TD>
+        </tr>
+        <TR>
+          <TD align="left">(Esc) Xxxxx</TD>
+          <TD align="left">Bezwzględna pozycja pozioma wydruku w 1/720&quot; cala</TD></TR>
+        <tr>
+          <TD align="left">(Esc) Yxxxx</TD>
+          <TD align="left">Bezwzględna pozycja pionowa wydruku w 1/720&quot; cala </TD>
+        </tr>
+        <TR>
+          <TD align="left">(Esc) B</TD>
+          <TD align="left">wytłuszczenie wydruku</TD></TR>
+        <TR>
+          <TD align="left">(Esc) b</TD>
+          <TD align="left">bez wytłuszczenia</TD></TR>
+        <TR>
+          <TD align="left">(Esc) I</TD>
+          <TD align="left">wydruk kursywą</TD></TR>
+        <TR>
+          <TD align="left">(Esc) i</TD>
+          <TD align="left">bez kursywy</TD></TR>
+        <TR>
+          <TD align="left">(Esc) U</TD>
+          <TD align="left">Wydruk podkreślony</TD></TR>
+        <TR>
+          <TD align="left">(Esc) u</TD>
+          <TD align="left">bez podkreślenia</TD></TR>
+        <TR>
+          <TD align="left">(Esc) S</TD>
+          <TD align="left">wydruk przekreślony</TD></TR>
+        <TR>
+          <TD align="left">(Esc) s</TD>
+          <TD align="left">bez przekreślenia</TD></TR></TABLE>
+        </center>
+      </div>
+      <p>&nbsp;</TD></TR>
+  <TR>
+    <TD width="100%">
+      <H3><a name="2"></a>Sekwencje Epson Matrix ESC-P2</H3>
+      <p align="center">
+      <img border="0" src="images/seq-epson.png" width="531" height="586" alt="Sekwencje zgodne z standardem Epson">
+      <TABLE cellSpacing=1 cellPadding=5 border=1 width="750">
+        
+        <TR>
+          <TD>(Esc) E lub (Esc) G</TD>
+          <TD>bold  - wytłuszczenie</TD></TR>
+        <TR>
+          <TD>(Esc) F lub (Esc) H</TD>
+          <TD>No bold  - bez wytłuszczenia</TD></TR>
+        <TR>
+          <TD>(Esc) 4</TD>
+          <TD>italic - kursywe</TD></TR>
+        <TR>
+          <TD>(Esc) 5</TD>
+          <TD>No italic - bez kursywy</TD></TR>
+        <TR>
+          <TD>(Esc) -1 lub (Esc) -#1</TD>
+          <TD>underline - podkreślenie</TD></TR>
+        <TR>
+          <TD>(Esc) -0 lub (Esc) -#0</TD>
+          <TD>No underline - bez podkreślenia</TD></TR>
+        <TR>
+          <TD>(Esc) P</TD>
+          <TD>Pica  - 10 znaków/cal</TD></TR>
+        <TR>
+          <TD>(Esc) M</TD>
+          <TD>Elite  - 12 znaków/cal</TD></TR>
+        <TR>
+          <TD>#14 lub (Esc) #14 lub (Esc) W1</TD>
+          <TD>Double width - szerokie czcionki </TD></TR>
+        <TR>
+          <TD>#20 lub (Esc) W0</TD>
+          <TD>Normal width - normalne czcionki</TD></TR>
+        <TR>
+          <TD>#15 lub (Esc) #15</TD>
+          <TD>Condensed - zagęszczenie </TD></TR>
+        <TR>
+          <TD>#18</TD>
+          <TD>No condensed - bez zagęszczenia</TD></TR>
+        <TR>
+          <TD>(Esc) rx</TD>
+          <TD>color - ustaw kolor wydruku &nbsp;&nbsp;&nbsp;&nbsp;x jest kodem ASCII:
+            <table border="0" width="100%" cellspacing="1" cellpadding="0">
+              <tr>
+                <td width="20%">
+            #0 -czarny</td>
+                <td width="32%">
+            #1 -karmazynowy</td>
+                <td width="20%">
+            #2 -siny</td>
+                <td width="20%">
+            #3 -fiolet</td>
+              </tr>
+              <tr>
+                <td width="20%">
+            #4 -żółty</td>
+                <td width="32%">
+            #5 -czerwony</td>
+                <td width="20%">
+            #6 -zielony</td>
+                <td width="20%"></td>
+              </tr>
+            </table>
+          </TD></TR>
+        <tr>
+          <TD>(Esc) S0 lub (Esc) S#0</TD>
+          <TD>superscript - indeks górny</TD>
+        </tr>
+        <TR>
+          <TD>(Esc) S1 lub (Esc) S#1</TD>
+          <TD>subscript -indeks dolny</TD></TR>
+        <TR>
+          <TD>(Esc) T</TD>
+          <TD>wyłącz indeksy górny lub dolny</TD></TR></TABLE>
+      <P>&nbsp;</P></TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <HR>
+      <FONT size=3>
+	  <A href="index.htm">O nas </A>| 
+	  <A href="readme.htm"> Podręcznik </A>| 
+	  <A href="news.htm"> Co nowego </A>| 
+	  <A href="http://track.websiteceo.com/r/5192/www.dosprn.com/DOSprn185.exe"> Pobierz </A>| 
+	  <A href="order.htm"> Zamów </A> | 
+	  <A href="faq.htm"> FAQ </A> | 
+	  <A href="mailto:support@dosprn.com?Subject=dosprn%20support"> Pomoc </A> | 
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>
+	  </FONT>
+      <HR>
+    </TD></TR></TABLE></CENTER></DIV>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39647417-1', 'dosprn.com');
+  ga('send', 'pageview');
+
+</script>
+</body></HTML>
