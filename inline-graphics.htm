@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>DOSprn 1.90. Wydruki w Windows tylko dla programów DOS'a</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=Content-Language content=pl>
+<META name=Description  content="DOSprn pozwala, by użyć twojego starego ulubionego programu DOS z nowymi drukarkami niezależnie od ich typów (tak i USB też !)" >
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ajnahusunj");
+</script>
+</head>
+<META name=Keywords  content="DOS, drukarki, program, drukownie, drukarka, USB, programy, LPT, program DOS, oprogramowanie, narodowości, język, międzynarodowy" >
+<BODY background=images/bg2.jpg>
+<DIV align=center>
+<TABLE height=461 cellSpacing=0 cellPadding=6 width=750 border=0>
+  <TR>
+    <TD width=750 colspan="5">
+      <table  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="50"><IMG src="images/logo.gif" ALT="Drukowanie z DOS'a na drukarkach pod Windows98, WinXP, Windows2000" width="42" height="39"></td>
+          <td width="281"><font size="6"><b>DOSprn 1.90</b></font></td>
+          <td width="194">      
+      <table border="2" bgcolor="#C0C0C0" cellpadding="4" cellspacing="4">
+        <tr>
+          <td><a href="https://dosprn.com"><img src="images/gb.png" align="center" width="30" height="20" alt="Dos print international support center DOSPRN" border=0></a></td>
+          <td><a href="https://spanish.dosprn.com" id="spanish"><img src="images/es.png" width="30" height="20" alt="Spanish dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://ukrainian.dosprn.com" id="ukrainian"><img src="images/ua.png" width="30" height="20" alt="DOSPRN Ukrainian dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://polska.dosprn.com"><img src="images/pl.png" width="30" height="20" alt="Dosprinter Polish support center" align="center" border="0"></a></td>
+          <td><a href="https://dosprn.co.il"><img src="images/il.png" width="30" height="20" alt="DOSPRN Israel dos usb support center" align="center" border="0"></a></td>
+          <td><a href="https://bkltd.com/dosprn/"><img src="images/bg.png" width="30" height="20" alt="DOSPRN Bulgaria dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://indonesian.dosprn.com"><img src="images/id.png" width="30" height="20" alt="Indonesian DOSPRN support center" align="center" border="0"></a></td>
+          <td><a href="https://dosprn.in"><img src="images/in.png" width="30" height="20" alt="Indian DOSPRN support" align="center" border="0"></a></td>
+
+        </tr>
+      </table>
+			</td>
+        </tr></table>
+    </TD>
+  </TR>
+  <TR>
+    <TD align=middle width=750 colSpan=3 height=26>
+      <HR>
+      <FONT size=3>
+  	  <A href="index.htm">O nas </A>&nbsp;||&nbsp;
+	  <A href="readme.htm"> Podręcznik </A>&nbsp;||&nbsp;
+	  <A href="news.htm"> Co nowego </A>&nbsp;||&nbsp;
+	  <A href="https://dosprn.com/DOSprn190.exe"> Pobierz </A>&nbsp;||&nbsp;
+	  <A href="order.htm"> Zamów </A>&nbsp;||&nbsp;
+	  <A href="faq.htm"> FAQ </A>&nbsp;||&nbsp;
+	  <A href="mailto:support@dosprn.com?Subject=DOSPRN%20support"> Pomoc </A>&nbsp;||&nbsp;
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>	
+	  </FONT>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD vAlign=top width=550 height=396>
+      <H1>Wbudowane pliki graficzne</H1>
+	<p>Obecna wersja DOSPRN może wydrukować plik obrazu bitmapowego (JPG/PNG/GIF/BMP) „tak jak jest” lub jako nagłówek/stopkę bieżącej strony.</p>
+
+	<h4>Polecenia ucieczki mogą mieć format</h4>
+
+<code>
+ESC~0"filename.bmp" - print header<br>
+ESC~1"filename.bmp" - print footer<br>
+ESC~2;ZZ;"filename.bmp" - print 'as is' at the current position, where ZZ - is a zoom factor<br>
+ESC~3;ZZ;"filename.bmp" - print 'as is' at the current position, where ZZ - is a zoom factor without cursor movement<br>
+</code>
+
+	<h4>Jest to część programu demonstracyjnego w składni BASIC, która zawiera przykładowy plik graficzny do dokumentu:</h4>
+<textarea cols="80" rows="13">
+LPRINT "TEST GRAPHIC PRINTING"
+LPRINT ""
+LPRINT "TEXT OVER GRAPHIC"
+LPRINT "TEXT LEFT" + CHR$(27)+"~3;4;"+CHR$(34)+"C:\TEMP\dosprn.gif"+CHR$(34)+"                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT LEFT                TEXT RIGHT"
+LPRINT "TEXT UNDER GRAPHIC"</textarea>
+	<h4>Wynik drukowania tego dokumentu z obsługą DOSPRN jest tutaj:</h4>
+
+<IMG src="images/dosprn_inline_image.png" ALT="Sample of a report with inline graphics">
+
+
+	  </TD></TR>
+  <TR>
+    <TD align=middle width=750 colSpan=3 height=26>
+      <HR>
+      <FONT size=3>
+  	  <A href="index.htm">O nas </A>&nbsp;||&nbsp;
+	  <A href="readme.htm"> Podręcznik </A>&nbsp;||&nbsp;
+	  <A href="news.htm"> Co nowego </A>&nbsp;||&nbsp;
+	  <A href="https://dosprn.com/DOSprn190.exe"> Pobierz </A>&nbsp;||&nbsp;
+	  <A href="order.htm"> Zamów </A>&nbsp;||&nbsp;
+	  <A href="faq.htm"> FAQ </A>&nbsp;||&nbsp;
+	  <A href="mailto:support@dosprn.com?Subject=DOSPRN%20support"> Pomoc </A>&nbsp;||&nbsp;
+	  <A href="nostalgy.htm"> DOS wspomnienia </A>	
+	  </FONT>
+      <HR>
+    </TD></TR></TABLE></DIV>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39647417-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-39647417-1');
+  gtag('config', 'AW-998639417');
+</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"137005363"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+</body></html>
