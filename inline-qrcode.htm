@@ -45,7 +45,7 @@
     <TD align=middle width=750 colSpan=3 height=26>
       <HR>
       <FONT size=3>
-  	  <A href="index.htm">O nas </A>&nbsp;||&nbsp;
+  	  <A href="about.htm">O nas </A>&nbsp;||&nbsp;
 	  <A href="readme.htm"> Podręcznik </A>&nbsp;||&nbsp;
 	  <A href="news.htm"> Co nowego </A>&nbsp;||&nbsp;
 	  <A href="https://www.dosprn.com/DOSprn200.exe"> Pobierz </A>&nbsp;||&nbsp;
@@ -64,7 +64,10 @@
 	<h4>Polecenia ucieczki mogą mieć format</h4>
 
 <code>
-ESC~9;ZZ;"filename.txt" - print QR-code, where ZZ - is a zoom factor<br>
+ESC~7;ZZ;"qrcode raw text" - print a QR code from the raw text<br><br>
+ESC~8;ZZ;"filename.txt" - print the QR code from the file in UTF-8<br><br>
+ESC~9;ZZ;"filename.txt" - print a QR code from the file with the same code page as the main report<br><br>
+where ZZ - is a zoom factor<br>
 </code>
 
 	<h4>Jest to część programu demonstracyjnego w składni BASIC, która zawiera przykładowy plik z kodem QR do dokumentu:</h4>
@@ -91,7 +94,7 @@ LPRINT "TEXT UNDER QRCODE"</textarea>
     <TD align=middle width=750 colSpan=3 height=26>
       <HR>
       <FONT size=3>
-  	  <A href="index.htm">O nas </A>&nbsp;||&nbsp;
+  	  <A href="about.htm">O nas </A>&nbsp;||&nbsp;
 	  <A href="readme.htm"> Podręcznik </A>&nbsp;||&nbsp;
 	  <A href="news.htm"> Co nowego </A>&nbsp;||&nbsp;
 	  <A href="https://www.dosprn.com/DOSprn200.exe"> Pobierz </A>&nbsp;||&nbsp;
